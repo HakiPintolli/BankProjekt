@@ -17,3 +17,60 @@
 .login_logo_container FontAwesomeIconView{
     -fx-fill: #ECF39E;
 }
+
+/*account selsector choicebox styles*/
+
+.account_selector{
+    -fx-background-color: #ecf39e;
+}
+
+.account_selector .label {
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+}
+
+.account_selector .arrom {
+    -fx-background-color: #132a13;
+}
+
+#choice-box-popup-menu {
+    -fx-background-color: #ecf39e;
+}
+
+/*login form styles*/
+
+#choice-promt-text {
+    -fx-font-weight: 400;
+}
+
+.login_form_conteiner {
+    -fx-spacing: 15;
+    -fx-alignment: top_left;
+}
+
+.login_form_conteiner .label {
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+.input_field {
+    -fx-background-color: #ffffff;
+    -fx-pref-height: 15;
+    -fx-font-size: 1.2em;
+}
+
+.login_form_conteiner Button{
+    -fx-background-color: #132a13;
+    -fx-text-fill: #ffffff;
+    -fx-pref-width: 350;
+    -fx-pref-height: 30;
+    -fx-font-size: 1.2em;
+}
+
+.login_form_conteiner Button:hover {
+    -fx-cursor: hand;
+}
+
+.error_lbl {
+    -fx-text-fill: #ff0000;
+}
