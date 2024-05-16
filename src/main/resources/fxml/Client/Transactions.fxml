@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.bankprojekt.Controller.Client.TransactionsController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text layoutX="359.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions"/>
+    <ListView fx:id="transactions_listview" layoutX="9.0" layoutY="89.0" prefHeight="640.0" prefWidth="830.0"
+              AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="100.0"/>
+</AnchorPane>
