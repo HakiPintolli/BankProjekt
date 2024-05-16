@@ -15,3 +15,4 @@ public class App extends Application{
         stage.show();
     }
 }
+//bla bla bla pe kqyri a po bon mu lidh me github nr:5
