@@ -1,4 +1,4 @@
-#Projekti semestral ne KNK grupi 24
+Projekti semestral ne KNK grupi 24
 
 Antaret e grupi:
 
