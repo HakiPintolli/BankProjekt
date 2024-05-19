@@ -24,8 +24,6 @@ xmlns:fx="http://javafx.com//fxml">
 </BorderPane>
 
 
-
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" stylesheets="@../Downloads/BankProjekt-main/BankProjekt-main/src/main/resources/Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx="com.jmc.mazebank.Controllers.Client.ClientMenuController">
    <children>
       <AnchorPane prefHeight="730.0" prefWidth="160.0">
