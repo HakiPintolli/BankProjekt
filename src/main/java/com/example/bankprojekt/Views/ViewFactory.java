@@ -26,4 +26,12 @@ public class ViewFactory {
         }
         return transactionsView;
     }
+    //fik une e shtova qito lidhet me CreateClientControler 
+    public void showAdminWindow() {
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
+        AdminController controller = new AdminController();
+        Loader.setController (controller);
+        createStage (Loader);
+    }
+    //......
 }
