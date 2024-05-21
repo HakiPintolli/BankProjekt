@@ -8,20 +8,19 @@
 -fx-font-family: "Calibri Light";
 }
 
-.accounts_view_container Vbox {
+.accounts_view_container VBox {
 -fx-border-width: 0 0 0 1;
 -fx-border-color: #888888;
--fx-padding: 10;
--fx-spacing: 15;
+-fx-padding: 10px;
+-fx-spacing: 15px;
 
 }
 
-.accounts_view_container Vbox text{
+.accounts_view_container VBox Text{
 -fx-font-size: 1.2em;
 }
 
-.accounts_view_container Vbox Label {
+.accounts_view_container VBox Label {
 -fx-font-size: 1.2em;
 -fx-font-weight: bold;
-
 }
