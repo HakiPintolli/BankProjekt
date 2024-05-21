@@ -33,5 +33,6 @@
             <Label text="\$24,000.00" />
          </children>
       </VBox>
+
    </children>
 </AnchorPane>
