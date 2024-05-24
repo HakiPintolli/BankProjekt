@@ -13,7 +13,7 @@ public class AdminMenuController implements Initializable{
   public Button logout_btn;
 
   @Override
-  public void initialize(URL url,ResourcBundle resourcBundle){
+  public void initialize(URL url,ResourceBundle resourceBundle){
     addListeners(){}
  }
     private void addListener(){}
