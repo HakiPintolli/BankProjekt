@@ -1,6 +1,6 @@
 package com.example.bankprojekt.Controller.Admin;
 
-import com.jmc.mazebank.Models.Model;
+import com.example.bankprojekt.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 
@@ -11,7 +11,7 @@ public class AdminController implements Initializable {
   public BorderPane admin_parent;
 
 
-@override
+@Override
 public void initialize(URL url, ResourceBundle resourceBundle){
   Model.getInstance().getViewFactory().getAdminSelectedMenuItem().addListener((observableValue, oldVal, newVal) {
     //add swich statment ....
