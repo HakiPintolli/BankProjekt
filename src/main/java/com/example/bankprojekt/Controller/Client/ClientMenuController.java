@@ -1,10 +1,11 @@
 package com.example.bankprojekt.Controller.Client;
 
+import com.example.bankprojekt.Models.Model;
 import javafx.fxml.Initializable;
-import jacafx.scene.control.Button;
+import javafx.scene.control.Button;
 
 import java.net.URL;
-import java.util.resourceBundle;
+import java.util.ResourceBundle;
 
 public class ClientMenuController implements Initializable {
   public Button dashboard_btn;
@@ -15,5 +16,19 @@ public class ClientMenuController implements Initializable {
   public Button Report_btn;
 
   @Override
-  public void initialize(URL url, ResourceBundle resourceBundle){}
+  public void initialize(URL url, ResourceBundle resourceBundle){
+    addListeners();
+  }
+
+  private void addListeners (){
+    dashboard_btn.setOnAction(event -> onDashboard());
+    Transactions_btn.setOnAction(event -> onTransactions());
+  }
+  private void onDashboard(){
+    Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("dashboard");
+  }
+
+  private void onTransactions(){
+    Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Transactions");
+  }
 }
