@@ -17,12 +17,21 @@ public class LoginController implements Initializable{
     public Button login_btn;
     public Label error_lbl;
     @Override
-    public void initialize(URL url,ResourceBundle resourceBundle){
-        login_btn.setOnAction(event -> Model.getInstance().getViewFactory().showClientWindow());
+        public void initialize(URL url,ResourceBundle resourceBundle){
+        ac_selector.setItems(FXCollections.observableArrayList(AccountType.CLIENT, AccountType.ADMIN));
+        ac_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
+        login_btn.setOnAction(event -> onLogin());
+        ac_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(ac_selector.getValue()));
     }
-    private void onLogin(){
+    
+        private void onLogin(){
         Stage stage = (Stage)error_lbl.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showClientWindow();
+        if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT){
+            Model.getInstance().getViewFactory().showClientWindow();
+        }else{
+            Model.getInstance().getViewFactory().showAdminWindow();
+        }
+
     }
 }
