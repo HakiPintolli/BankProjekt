@@ -1,8 +1,13 @@
 package com.example.bankprojekt.Controller.Client;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 public class AccountsController {
     public Label ch_acc_num;
@@ -17,6 +22,9 @@ public class AccountsController {
     public Button trans_to_sv_btn;
     public TextField amount_to_ch;
     public Button trans_to_cv_btn;
+     @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
 
-}
