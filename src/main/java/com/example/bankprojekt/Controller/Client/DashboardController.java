@@ -22,5 +22,5 @@ public class DashboardController implements Initializable {
     public TextField amount_fld;
 
     @Override
-    public void initiaize(URL url, ResourceBundle resourceBundle){}
+    public void initialize(URL url, ResourceBundle resourceBundle){}
 }
