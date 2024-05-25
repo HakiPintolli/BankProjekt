@@ -68,7 +68,7 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Income" />
                   <Label fx:id="income_lbl" styleClass="income_amount" text="+$4000.00" />
                   <Line endX="160.0" />
-                  <Text fx:id="expense_lbl" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses" />
                   <Label fx:id="expenses" layoutX="10.0" layoutY="28.0" styleClass="expense_amount" text="-$1500.00" />
                </children>
             </VBox>
