@@ -1,6 +1,7 @@
 package com.example.bankprojekt.Views;
 
 import com.example.bankprojekt.Controller.Client.ClientController;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -42,6 +43,16 @@ public class ViewFactory {
         return transactionsView;
     }
 
+      public AnchorPane getAccountsView() {
+        if (accountsView == null){
+            try{
+                accountsView = new FXMLLoader(getClass().getResource("/Fxml/CLient/Accounts.fxml")).load();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return accountsView;
+    }
 
 
     public void showLoginWindow() {
