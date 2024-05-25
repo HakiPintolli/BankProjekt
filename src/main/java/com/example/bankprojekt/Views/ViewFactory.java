@@ -1,57 +1,76 @@
 package com.example.bankprojekt.Views;
 
-import javafx.beans.property.SimpleStringProperty;
+import com.example.bankprojekt.Controller.Client.ClientController;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
 
 public class ViewFactory {
-
     private final StringProperty clientSelectedMenuItem;
+    //Client Views
+    private AnchorPane dashboardView;
     private AnchorPane transactionsView;
-
-    //Admin Views
-    private final StringProperty adminSelectedMenuItems;
-    private AnchorPane createClientView;
-    
     public ViewFactory(){
-        this.clientSelectedMenuItem= new SimpleStringProperty("");
-        this.adminSelectedMenuItems= new SimpleStringProperty("");
+        this.clientSelectedMenuItem = new SimpleStringProperty("");
     }
-    public StringProperty getClientSelectedMenuItem(){
+    public  StringProperty getClientSelectedMenuItem(){
         return clientSelectedMenuItem;
     }
-    public AnchorPane getTransactionsView() {
-        if (transactionsView==null){
+
+    public AnchorPane getDashboardView() {
+        if (dashboardView == null) {
             try {
-                transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fmxl")).load();
+                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/Dashboard.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return dashboardView;
+    }
+
+    public AnchorPane getTransactionsView() {
+        if (transactionsView == null){
+            try {
+                transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
         return transactionsView;
     }
-    //fik une e shtova qito lidhet me CreateClientControler 
-    /*
-    *Admin Views Section
-    */
-    public StringProperty getAdminSelectedMenuItems(){
-        return adminSelectedMenuItems;
+
+
+
+    public void showLoginWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/login.fxml"));
+        createStage(loader);
     }
-    public AnchorPane getCreateClientView(){
-        if(CreateClientView = null){
-        try{CreateClientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClient.fxml")).load();
-           }catch(Exception e){
+
+    public void showClientWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
+        ClientController clientController = new ClientController();
+        loader.setController(clientController);
+        createStage(loader);
+    }
+
+    private void createStage(FXMLLoader loader) {
+        Scene scene = null;
+        try {
+            scene = new Scene(loader.load());
+        } catch (Exception e) {
             e.printStackTrace();
-           }
         }
-         return CreateClientView;
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Maze Bank");
+        stage.show();
     }
-    public void showAdminWindow() {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
-        AdminController controller = new AdminController();
-        Loader.setController (controller);
-        createStage (Loader);
+
+    public void closeStage(Stage stage){
+        stage.close();
     }
-    //......
+
 }
