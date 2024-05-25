@@ -147,6 +147,8 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/bank232.png"))));
+        stage.setResizable(false);
         stage.setTitle("Maze Bank");
         stage.show();
     }
