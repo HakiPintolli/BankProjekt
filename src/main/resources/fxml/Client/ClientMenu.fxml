@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" stylesheets="@../Downloads/BankProjekt-main/BankProjekt-main/src/main/resources/Styles/ClientMenu.css"
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" stylesheets="@../../Styles/ClientMenu.css"
 xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankprojekt.Controller.Client.ClientMenuController">
    <children>
       <AnchorPane prefHeight="730.0" prefWidth="160.0">
@@ -26,44 +26,44 @@ xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:contr
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0">
                            <image>
-                              <Image url="@../Downloads/25694.png" />
+                              <Image url="@../../Images/Dashboard.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <Button fx:id="Transactions_btn" mnemonicParsing="false" text="Transactions">
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <ImageView fitHeight="15.0" fitWidth="20.0">
                            <image>
-                              <Image url="@../Downloads/29-297406_handshake-free-icon-handshake-icon-free.png" />
+                              <Image url="@../../Images/handshake.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <Button fx:id="Accounts_btn" mnemonicParsing="false" text="Accounts">
                      <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="18.0">
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
                            <image>
-                              <Image url="@Untitled.png" />
+                              <Image url="@../../Images/profile.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <Line endX="120.0" />
-                  <Button fx:id="Profile_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Profile">
+                  <Button fx:id="Profile_btn" mnemonicParsing="false" styleClass="alt_menu_button" text="Profile">
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <ImageView fitHeight="24.0" fitWidth="24.0">
                            <image>
-                              <Image url="@../Downloads/3069450-200.png" />
+                              <Image url="@../../Images/white_acc.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="LogOut_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Log Out">
+                  <Button fx:id="LogOut_btn" mnemonicParsing="false" styleClass="alt_menu_button" text="Log Out">
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <ImageView fitHeight="32.0" fitWidth="32.0">
                            <image>
-                              <Image url="@../Downloads/log%20out.png" />
+                              <Image url="@../../Images/white_log_out.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -72,9 +72,9 @@ xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:contr
             </VBox>
             <VBox layoutX="10.0" prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
                      <image>
-                        <Image url="@../Downloads/bank232.png" />
+                        <Image url="@../../Images/bank232.png" />
                      </image>
                   </ImageView>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maze Bank" wrappingWidth="124.53671264648438" />
@@ -88,7 +88,7 @@ xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:contr
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0">
                            <image>
-                              <Image url="@../Downloads/risk.png" />
+                              <Image url="@../../Images/risk.png" />
                            </image>
                         </ImageView>
                      </graphic>
