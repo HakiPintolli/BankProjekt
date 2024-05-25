@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0"
+      styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.bankprojekt.Controller.Admin.AdminMenuController">
+    <children>
+        <AnchorPane prefHeight="730.0" prefWidth="160.0" styleClass="left_container">
+            <children>
+                <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Images/bank232.png" />
+                            </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maze Bank" />
+                    </children>
+                </VBox>
+                <VBox layoutX="40.0" layoutY="254.0" prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Button fx:id="create_client_btn" mnemonicParsing="false" text="Create Client" translateX="22.0">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Images/plus.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="clients_btn" mnemonicParsing="false" text="Clients" translateX="22.0">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Images/list.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="deposit_btn" mnemonicParsing="false" text="Deposit" translateX="22.0">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Images/bill.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="logout_btn" mnemonicParsing="false" styleClass="alt_menu_button" text="Log Out" translateX="22.0">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Images/white_log_out.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

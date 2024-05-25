@@ -1,8 +1,10 @@
 package com.example.bankprojekt.Views;
 
+
+import com.example.bankprojekt.Controller.Admin.AdminController;
 import com.example.bankprojekt.Controller.Client.ClientController;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
