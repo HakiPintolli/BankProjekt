@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="deposit_contanier" stylesheets="@../../Styles/Deposit.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankprojekt.Controller.Admin.DepositController">
+   <VBox layoutX="15.0" layoutY="137.0" prefHeight="570.0" prefWidth="820.0" styleClass="search_box" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="100.0">
+      <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="820.0" styleClass="search_box" stylesheets="@../../Styles/Deposit.css">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Payee Address: " />
+         <TextField fx:id="pAddress_fld" />
+         <Button fx:id="search_btn" mnemonicParsing="false" text="Search">
+            <graphic>
+               <ImageView fitHeight="22.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/search.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+      </HBox>
+      <ListView fx:id="result_list" prefHeight="200.0" prefWidth="820.0" styleClass="list-wiew" />
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="315.0" prefWidth="100.0" styleClass="search_box" stylesheets="@../../Styles/Deposit.css">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="style" text="Deposit Section" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="style" text="Amount:" />
+         <TextField fx:id="amount_fld" />
+         <Button fx:id="deposit_btn" mnemonicParsing="false" text="Deposit">
+            <graphic>
+               <ImageView fitHeight="22.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/money.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+      </VBox>
+   </VBox>
+</AnchorPane>
