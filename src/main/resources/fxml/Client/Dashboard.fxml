@@ -18,17 +18,25 @@
 <AnchorPane prefHeight="750.0" prefWidth="850.0" stylesheets="@../../Styles/Dashboard.css"
             xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.bankprojekt.Controller.Client.DashboardController">
-    <Label fx:id="login_date" styleClass="date_lbl" text="Today.2024-XX-XX" AnchorPane.rightAnchor="14.0"
-           AnchorPane.topAnchor="27.0"/>
-    <Text fx:id="user_name" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi, Patrick"
-          AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0"/>
-    <Text layoutX="811.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title"
-          text="Accounts Summary" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0"/>
-    <Text layoutX="-5.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title"
-          text="My Accounts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0"/>
-    <HBox layoutX="20.0" layoutY="119.0" prefHeight="180.0" prefWidth="620.0" styleClass="accounts_view"
-          AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
-        <AnchorPane prefHeight="150.0" prefWidth="295.0">
+    <children>
+        <Label fx:id="login_date" styleClass="date_lbl" text="Today.2024-XX-XX" AnchorPane.rightAnchor="14.0"
+               AnchorPane.topAnchor="27.0"/>
+        <Text fx:id="user_name" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi, Patrick"
+              AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0"/>
+        <Text fx:id="accounts_summary" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title"
+              text="Accounts Summary" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0"/>
+        <Text fx:id="my_accounts" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title"
+              text="My Accounts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0"/>
+        <HBox prefHeight="180.0" prefWidth="620.0" styleClass="accounts_view"
+              AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <AnchorPane prefHeight="150.0" prefWidth="295.0">
+                    <!-- Additional elements for this AnchorPane can be added here -->
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
             <styleClass>
                 <String fx:value="account_gradient"/>
                 <String fx:value="account"/>
