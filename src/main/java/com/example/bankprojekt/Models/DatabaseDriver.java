@@ -1,17 +1,14 @@
 package com.example.bankprojekt.Models;
 
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Collection;
+import java.sql.*;
+
 
 public class DatabaseDriver {
-    private Collection conn;
+    private Connection conn;
 
     public DatabaseDriver(){
         try{
-            this.conn = (Collection) DriverManager.getConnection("jdbc:sqlite:mazebank,db");
+            this.conn = DriverManager.getConnection("jdbc:sqlite:mazebank.db");
         }
         catch (SQLException e){
             e.printStackTrace();

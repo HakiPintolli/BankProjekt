@@ -15,9 +15,12 @@ public class TransactionCellController implements Initializable {
     public Label sender_lbl;
     public Label seciver_lbl;
     public Label amount_lbl;
+    public Label server_lbl;
+
     private final Transaction transaction;
 
-     public  TransactionCellController(Transaction transaction){
+
+    public TransactionCellController(Transaction transaction) {
         this.transaction = transaction;
     }
 

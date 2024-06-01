@@ -1,6 +1,5 @@
 package com.example.bankprojekt.Controller.Admin;
 
-import com.almasb.fxgl.net.Client;
 import com.example.bankprojekt.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
@@ -16,9 +15,9 @@ public class AdminController implements Initializable {
 public void initialize(URL url, ResourceBundle resourceBundle){
     Model.getInstance().getViewFactory().getAdminSelectedMenuItem().addListener((observableValue, oldVal, newVal) -> {
         switch (newVal){
-            case CLIENTS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getClientsView());
+            case CLIENTS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getClientView());
             case DEPOSIT -> admin_parent.setCenter(Model.getInstance().getViewFactory().getDepositView());
-            default  -> admin_parent.getCenter(Model.getInstance().getViewFactory().getCreateCLientView());
+            default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getCreateClientView());
         }
     } );
 

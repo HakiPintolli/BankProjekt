@@ -11,6 +11,8 @@ module com.example.bankprojekt {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires kotlin.stdlib;
+    requires java.desktop;
 
     opens com.example.bankprojekt to javafx.fxml;
     exports com.example.bankprojekt;
@@ -19,4 +21,6 @@ module com.example.bankprojekt {
     exports com.example.bankprojekt.Controller.Client;
     exports com.example.bankprojekt.Models;
     exports com.example.bankprojekt.Views;
+    opens com.example.bankprojekt.Controller.Client to javafx.fxml;
+
 }

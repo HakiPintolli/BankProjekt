@@ -1,5 +1,5 @@
 .login_container{
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: #e8e8e8;
 }
 
 /*Logo Container Styles*/
@@ -12,8 +12,6 @@
 .login_logo_container Text{
     -fx-font-size: 2em;
 }
-
-
 
 /*account selsector choicebox styles*/
 
@@ -66,6 +64,7 @@
 
 .login_form_conteiner Button:hover {
     -fx-cursor: hand;
+    -fx-background-color: #296110;
 }
 
 .error_lbl {

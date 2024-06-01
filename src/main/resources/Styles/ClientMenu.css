@@ -1,7 +1,6 @@
 .main_menu_container{
--fx-background: #EEEEEE;
+-fx-background: #e8e8e8;
 -fx-alignment: center;
--fx-padding: 0 10 0 10;
 }
 
 .left_container{
@@ -28,7 +27,7 @@
 }
 
 .menu_container{
--fx-:padding: 40 10 10 20;
+-fx-padding: 10 10 10 20;
 -fx-spacing: 20;
 }
 
@@ -66,7 +65,7 @@
 
 /* Report Bug/Suggestion */
 .report_container {
--fx-background-color: #EEFFEE;
+-fx-background-color: #dfffdf;
 -fx-background-radius: 10;
 -fx-alignment: center;
 -fx-spacing: 10;

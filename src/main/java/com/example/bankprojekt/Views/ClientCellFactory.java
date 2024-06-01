@@ -1,19 +1,20 @@
 package com.example.bankprojekt.Views;
 
 import com.example.bankprojekt.Controller.Admin.ClientCellController;
+import com.example.bankprojekt.Models.Client;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 
-public class ClientCellFactory extends ListCell {
+public class ClientCellFactory extends ListCell<Client> {
     @Override
-    protected void updateItem(Object client, boolean empty) {
+    protected void updateItem(Client client, boolean empty) {
         super.updateItem(client, empty);
         if (empty){
             setText(null);
             setGraphic(null);
 
         }else{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/ClientCell.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Admin/ClientCell.fxml"));
             ClientCellController controller = new ClientCellController(client);
             loader.setController(controller);
             setText(null);

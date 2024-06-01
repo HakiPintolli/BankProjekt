@@ -1,12 +1,14 @@
 package com.example.bankprojekt.Views;
 
-
 import com.example.bankprojekt.Controller.Admin.AdminController;
 import com.example.bankprojekt.Controller.Client.ClientController;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -15,15 +17,17 @@ public class ViewFactory {
     private AccountType loginAccountType;
     
     //Client Views
-    private final ObjectProperty <ClientMenuOptions> clientSelectedMenuItem;
+    private final ObjectProperty<ClientMenuOptions> clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
 
      // Admin Views
     private final ObjectProperty <AdminMenuOptions> adminSelectedMenuItem;
-    private AnchorPane createCLientView;
-    private AnchorPane clientsView;
+    private AnchorPane createClientView;
+    private AnchorPane clientView;
+    private AnchorPane depositView;
+    
       public ViewFactory(){
         this.loginAccountType = AccountType.CLIENT;
         this.clientSelectedMenuItem = new SimpleObjectProperty<>();
@@ -46,7 +50,7 @@ public class ViewFactory {
     public AnchorPane getDashboardView() {
         if (dashboardView == null) {
             try {
-                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/Dashboard.fxml")).load();
+                dashboardView = new FXMLLoader(getClass().getResource("/fxml/Client/Dashboard.fxml")).load();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -57,7 +61,7 @@ public class ViewFactory {
     public AnchorPane getTransactionsView() {
         if (transactionsView == null){
             try {
-                transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
+                transactionsView = new FXMLLoader(getClass().getResource("/fxml/Client/Transactions.fxml")).load();
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -68,7 +72,7 @@ public class ViewFactory {
       public AnchorPane getAccountsView() {
         if (accountsView == null){
             try{
-                accountsView = new FXMLLoader(getClass().getResource("/Fxml/CLient/Accounts.fxml")).load();
+                accountsView = new FXMLLoader(getClass().getResource("/fxml/Client/Accounts.fxml")).load();
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -77,7 +81,7 @@ public class ViewFactory {
     }
 
         public void showClientWindow() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Client/Client.fxml"));
         ClientController clientController = new ClientController();
         loader.setController(clientController);
         createStage(loader);
@@ -89,32 +93,33 @@ public class ViewFactory {
         return adminSelectedMenuItem;
     }
 
-    public AnchorPane getCreateCLientView(){
-        if (createCLientView==null){
+    public AnchorPane getCreateClientView(){
+        if (createClientView==null){
             try{
-                createCLientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClientController")).load();
+                createClientView = new FXMLLoader(getClass().getResource("/fxml/Admin/CreateClientController.fxml")).load();
             } catch (Exception e){
                 e.printStackTrace();
             }
         }
-        return createCLientView;
+        return createClientView;
     }
 
-    public AnchorPane getClientsView(){
-        if (clientsView ==null){
-            try {
-                clientsView = new FXMLLoader(getClass().getResource("/fxml/Admin/Clients.fxml")).load();
-            }catch (Exception e){
+    public AnchorPane getClientView(){
+        if (clientView == null){
+            try{
+                clientView = new FXMLLoader(getClass().getResource("/fxml/Admin/Clients.fxml")).load();
+            }
+            catch (Exception e){
                 e.printStackTrace();
             }
         }
-        return clientsView;
+        return clientView;
     }
 
-    public AnchorPane getDepositView(){
+    public AnchorPane getDepositView() {
         if (depositView == null){
             try {
-                depositView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Deposit.fxml")).load();
+                depositView = new FXMLLoader(getClass().getResource("/fxml/Admin/Deposit.fxml")).load();
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -123,16 +128,16 @@ public class ViewFactory {
         return depositView;
     }
 
-      public void showAdminWindow() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
-        AdminController controller = new AdminController();
-        loader.setController(controller);
+    public void showAdminWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Admin/Admin.fxml"));
+        AdminController AdminController = new AdminController();
+        loader.setController(AdminController);
         createStage(loader);
     }
 
 
     public void showLoginWindow() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
         createStage(loader);
     }
 
@@ -147,7 +152,6 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/bank232.png"))));
         stage.setResizable(false);
         stage.setTitle("Maze Bank");
         stage.show();

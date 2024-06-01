@@ -1,16 +1,16 @@
 .create_client_container{
--fx-background-color: #EEEEEE;
+-fx-background-color: #e8e8e8;
 }
 
 .create_client_container Text{
 -fx-font-size: 1.2em;
 -fx-fill: #888888;
 }
-.create_client_container Vbox{
+.create_client_container .Vbox{
 -fx-border-width: 0 0 0 1;
 -fx-border-color: #000000;
 -fx-padding: 10;
--fx-spacing: 15;
+-fx-spacing: 12 ;
 }
 
 .create_client_container TextField {

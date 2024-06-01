@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+
 public class ClientMenuController implements Initializable {
   public Button dashboard_btn;
   public Button Transactions_btn;
@@ -24,7 +26,7 @@ public class ClientMenuController implements Initializable {
   private void addListeners (){
     dashboard_btn.setOnAction(event -> onDashboard());
     Transactions_btn.setOnAction(event -> onTransactions());
-     Accounts_btn.setOnAction(event ->onAccounts());
+    Accounts_btn.setOnAction(event ->onAccounts());
   }
   private void onDashboard(){
     Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.DASHBOARD);
@@ -37,4 +39,5 @@ public class ClientMenuController implements Initializable {
    private void onAccounts() {
     Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.ACCOUNTS);
   }
+
 }

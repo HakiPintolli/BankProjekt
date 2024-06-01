@@ -23,9 +23,6 @@ public class ClientCellController implements Initializable {
         this.client = client;
     }
 
-
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

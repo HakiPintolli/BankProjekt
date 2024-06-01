@@ -23,7 +23,7 @@
    <Label fx:id="sender_lbl" layoutX="208.0" layoutY="30.0" styleClass="trans_pAddress_lbl" text="Patrick"
           AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="22.0"/>
    <Line endY="20.0" layoutX="275.0" layoutY="18.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="20.0"/>
-   <Label fx:id="server_lbl" layoutX="353.0" layoutY="30.0" styleClass="trans_pAddress_lbl" text="Benjamin"
+   <Label fx:id="seciver_lbl" layoutX="353.0" layoutY="30.0" styleClass="trans_pAddress_lbl" text="Benjamin"
           AnchorPane.topAnchor="22.0"/>
    <Label fx:id="amount_lbl" layoutX="491.0" layoutY="17.0" styleClass="trans_amount_lbl" text="\$2000"
           AnchorPane.rightAnchor="14.200000000000045" AnchorPane.topAnchor="17.0"/>
