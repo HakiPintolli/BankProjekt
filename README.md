@@ -7,4 +7,4 @@ Fikri Stublla,
 Emir Bislimi,
 Fatime Sadiku,
 Edison Hajdari,
-Fatjona
+Fatjona Gashi
